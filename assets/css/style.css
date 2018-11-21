@@ -2,7 +2,7 @@
 @keyframes bounce {
    0%{
       opacity: 0;
-      transform: translateY(-50%);
+      transform: translateY(-300%);
    }
    40% {
       transform: translateY(0);
@@ -139,7 +139,6 @@ nav ul li a:hover {
 .skills-list ul {
    box-sizing: border-box;
    text-decoration: none;
-
 }
 .skills-list ul li {
    display: inline;
@@ -150,9 +149,38 @@ nav ul li a:hover {
    border: 1px solid #3779e5;
    border-radius: 10px;
 }
-.skills-list {
+.skills-list .languages {
    opacity: 0;
    animation: bounce 1.5s forwards;
+}
+.skills-list .cheat-codes {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+   animation-delay: .5s;
+}
+.skills-list .front-frameworks {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+   animation-delay: 1s;
+
+}
+.skills-list .back-frameworks {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+   animation-delay: 1.5s;
+
+}
+.skills-list .database {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+   animation-delay: 2s;
+
+}
+.skills-list .js-library {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+   animation-delay: 2.5s;
+
 }
 .skills-list ul li:hover {
    color: white;
@@ -301,11 +329,20 @@ footer h6 {
 	.col-lg-2 {width: 16.662%;}
 	.col-lg-1 {width: 8.332%;}
 }
+/* Min width */
+@media screen and (min-width: 150px) {
+   .head-container nav {
+      display: none;
+   }
+}
 
 /* iPhone 5/SE */
 @media screen and (min-width: 320px) {
+   .head-container nav {
+      display: none;
+   }
    .landing {
-      padding-top: 5px;;
+      padding-top: 20px;;
    }
    .skills ul {
       padding: 0;
@@ -317,6 +354,9 @@ footer h6 {
 }
 /* iPhone 6/7/8 */
 @media screen and (min-width: 375px) {
+   .head-container nav {
+      display: none;
+   }
    .landing {
       padding-top: 20px;;
    }
@@ -339,7 +379,12 @@ footer h6 {
       
    } 
 }
-
+/* iPad  */
+@media screen and (min-width: 550px) {
+   .head-container nav {
+      display: inline-block;
+   }
+}
 /* FLOAT CLEAR FIX */
 .row:before, 
 .row:after,
