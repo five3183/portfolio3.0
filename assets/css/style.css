@@ -1,0 +1,359 @@
+/* Bounce Animation */
+@keyframes bounce {
+   0%{
+      opacity: 0;
+      transform: translateY(-50%);
+   }
+   40% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-5px);
+   }
+   60% {
+      transform: translateY(3px);
+   }
+   70% {
+      transform: translateY(-3px);
+   }
+   80%{
+      transform: translateY(1px);
+   }
+   90%{
+      transform: translateY(-1px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+
+   }
+}
+/* End Bounce */
+body {
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 120%;
+   color: white;
+   margin: 0;
+}
+.row {
+   width: 100%;
+   margin: auto;
+   box-sizing: border-box;
+}
+.col {
+	float: left;
+   width: 100%;
+	box-sizing: border-box;
+}
+.head-container {
+   background-image: url('../images/wood.jpg');
+   background-size: cover;
+   text-align: center;
+   height: 100vh;
+   margin-top: -10px;
+}
+nav {
+   text-align: right;
+   padding: 20px;
+}
+
+nav ul {
+   box-sizing: border-box;
+
+}
+nav ul li {
+   display: inline;
+   margin-right: 10px;
+   text-align: right;
+}
+nav ul li a {
+   text-decoration: none;
+   padding: 5px;
+   color: white;
+}
+nav ul li a:hover {
+   color: #3779e5;
+   box-sizing: border-box;
+}
+.container {
+   max-width: 100%;
+   text-align: center;
+   margin: 0 auto;
+   box-sizing: border-box;
+}
+#landing {
+   min-height: 500px;
+}
+.landing {
+   box-sizing: border-box;
+   padding-top: 200px;
+}
+.landing header h1 {
+   color: white;
+   font-size: 300%;
+}
+.landing header h3 {
+   color: white;
+}
+
+.icon {
+	font-size: 30px;
+	margin: 5px;
+	color:white;
+}
+.icon:hover {
+   transform: scale(1.3);
+   color: #3779e5;
+
+}
+.resume {
+   margin-top: 20px;
+}
+.resume span {
+   width: 100px;
+   display: inline-block;
+}
+.resume span a {
+   text-decoration: none;
+   color: white;
+   width: 100px;
+}
+
+.resume span a:hover {
+   text-decoration: none;
+   color: #3779e5;
+}
+.resume span:hover {
+   transform: scale(1.3);
+
+}
+.skills {
+   color: #3779e5;
+   padding-bottom: 100px;
+   box-sizing: border-box;
+}
+.skills header hr {
+   box-shadow: 0 0 10px 1px #3779e5;
+   width: 300px;
+}
+.skills-list ul {
+   box-sizing: border-box;
+   text-decoration: none;
+
+}
+.skills-list ul li {
+   display: inline;
+   text-decoration: none;
+   margin-right: 10px;
+   padding: 5px;
+   color: #3779e5;
+   border: 1px solid #3779e5;
+   border-radius: 10px;
+}
+.skills-list {
+   opacity: 0;
+   animation: bounce 1.5s forwards;
+}
+.skills-list ul li:hover {
+   color: white;
+   background-color: #3779e5;
+}
+.projects {
+   background-color: #3779e5;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 0 50px 50px 50px;
+   box-sizing: border-box;
+}
+.project {
+   position: relative;
+   height: 250px;
+   width: 250px;
+   float: left;
+   overflow: hidden;
+   box-sizing: border-box;
+}
+.project img {
+   width: 100%;
+   height: 100%;
+   padding: 3px;
+   box-sizing: border-box;
+}
+.project a {
+   display: block;
+   color: #3779e5;
+   text-decoration: none;
+   margin-bottom: 10px;
+}
+.project a:hover {
+   transform: scale(1.5);
+}
+.overlay {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+   width:100%;
+   padding: 10px;
+   opacity: 0;
+   transition-property: all;
+   transition-duration: 1s;
+   transform: translateY(100%);
+   box-sizing: border-box;
+}
+.project:hover .overlay {
+   opacity: .8;
+   transform: translateY(0);
+}
+.contact {
+   height: 100vh;
+   color: #3779e5;
+   padding-top: 200px;
+   background-color: white;
+}
+.contact header hr {
+   box-shadow: 0 0 10px 1px #3779e5;
+   width: 150px;
+   margin-bottom: 20px;
+}
+.mail-icon {
+   text-decoration: none;
+   color: #3779e5;
+   font-size: 150px;
+   margin-bottom: 30px;
+}
+.mail-icon:hover {
+   transform: scale(1.3);
+   color: blue;
+}
+footer {
+	text-align: center;
+	font-size: 85%;
+	color: #FFF;
+}
+footer h6 {
+   background-image: url('../images/wood.jpg');
+   background-size: cover;
+   height: 40px; 
+   width: 100%;
+   text-align: center;
+   box-sizing: border-box;
+   margin-top: 0;
+   margin-bottom: -10px;
+   padding: 15px;
+}
+
+/* COL SIZING mobile screens (base sizing) */
+
+@media screen and (min-width: 480px) {
+   .col-xs-11 {width: 91.662%;}
+   .col-xs-10 {width: 83.332%;}
+   .col-xs-9 {width: 75%;}
+   .col-xs-8 {width: 66.662%;}
+   .col-xs-7 {width: 58.331%;}
+   .col-xs-6 {width: 50%;}
+   .col-xs-5 {width: 41.662%;}
+   .col-xs-4 {width: 33.332%;}
+   .col-xs-3 {width: 25%;}
+   .col-xs-2 {width: 16.662%;}
+   .col-xs-1 {width: 8.332%;}
+}
+
+@media screen and (min-width: 768px) {
+	.col-sm-11 {width: 91.662%;}
+	.col-sm-10 {width: 83.332%;}
+	.col-sm-9 {width: 75%;}
+	.col-sm-8 {width: 66.662%;}
+	.col-sm-7 {width: 58.331%;}
+	.col-sm-6 {width: 50%;}
+	.col-sm-5 {width: 41.662%;}
+	.col-sm-4 {width: 33.332%;}
+	.col-sm-3 {width: 25%;}
+	.col-sm-2 {width: 16.662%;}
+	.col-sm-1 {width: 8.332%;}
+}
+
+@media screen and (min-width: 1024px) {
+	.col-md-11 {width: 91.662%;}
+	.col-md-10 {width: 83.332%;}
+	.col-md-9 {width: 75%;}
+	.col-md-8 {width: 66.662%;}
+	.col-md-7 {width: 58.331%;}
+	.col-md-6 {width: 50%;}
+	.col-md-5 {width: 41.662%;}
+	.col-md-4 {width: 33.332%;}
+	.col-md-3 {width: 25%;}
+	.col-md-2 {width: 16.662%;}
+	.col-md-1 {width: 8.332%;}
+}
+
+@media screen and (min-width: 1280px) {
+	.col-lg-11 {width: 91.662%;}
+	.col-lg-10 {width: 83.332%;}
+	.col-lg-9 {width: 75%;}
+	.col-lg-8 {width: 66.662%;}
+	.col-lg-7 {width: 58.331%;}
+	.col-lg-6 {width: 50%;}
+	.col-lg-5 {width: 41.662%;}
+	.col-lg-4 {width: 33.332%;}
+	.col-lg-3 {width: 25%;}
+	.col-lg-2 {width: 16.662%;}
+	.col-lg-1 {width: 8.332%;}
+}
+
+/* iPhone 5/SE */
+@media screen and (min-width: 320px) {
+   .landing {
+      padding-top: 5px;;
+   }
+   .skills ul {
+      padding: 0;
+   }
+   .projects {
+      clear: both;
+      padding: 20px 35px 35px 35px;
+   } 
+}
+/* iPhone 6/7/8 */
+@media screen and (min-width: 375px) {
+   .landing {
+      padding-top: 20px;;
+   }
+   .skills ul {
+      padding: 0;
+   }
+   .projects {
+      clear: both;
+      padding: 20px 65px 65px 65px;
+   } 
+}
+/* iPhone 6/7/8 plus */
+@media screen and (min-width: 414px) {
+   .landing {
+      padding-top: 50px;;
+   }
+   .projects {
+      clear: both;
+      padding: 20px 80px 80px 80px;
+      
+   } 
+}
+
+/* FLOAT CLEAR FIX */
+.row:before, 
+.row:after,
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+.row:after,
+.group:after {
+	clear: both;
+}
+
+.row,
+.group {
+	zoom: 1;
+}
